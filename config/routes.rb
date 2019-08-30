@@ -8,7 +8,10 @@ Rails.application.routes.draw do
     resources :topics 
   end
 
-  # resources :comments
+  resources :topics do
+    resources :comments
+  end
+  
     # get '/subs', to: 'subs#index'
     # get '/subs/:id', to: 'subs#show'
     # get '/subs/:', to: 'subs#edit'
